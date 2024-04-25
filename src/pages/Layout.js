@@ -1,9 +1,12 @@
 import React from "react";
 import { MiniDrawer } from "../components/SideBar";
 
-const Layout = () => {
+const Layout = ({ children }) => {
     return (
-        <MiniDrawer />
+        <div>
+            <MiniDrawer />
+            {children}
+        </div>
     )
 }
 

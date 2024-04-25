@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useTheme } from "@mui/material/styles";
-import { DrawerHeader, AppBar, Drawer, Search, SearchIconWrapper, StyledInputBase } from '../assets/SideBarStyles/sideBarStyle';
+import { DrawerHeader, AppBar, Drawer, Search, SearchIconWrapper, StyledInputBase } from '../assets/styles/SideBarStyles/sideBarStyle';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
@@ -265,7 +265,7 @@ const MiniDrawer = () => {
             </Drawer>
             <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
                 <DrawerHeader />
-                <Typography paragraph>
+                {/* <Typography paragraph>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non
                     enim praesent elementum facilisis leo vel. Risus at ultrices mi tempus
@@ -291,7 +291,7 @@ const MiniDrawer = () => {
                     tristique sollicitudin nibh sit. Ornare aenean euismod elementum nisi quis
                     eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
                     posuere sollicitudin aliquam ultrices sagittis orci a.
-                </Typography>
+                </Typography> */}
             </Box>
         </Box>
     );
