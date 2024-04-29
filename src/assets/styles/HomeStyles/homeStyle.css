@@ -1,0 +1,40 @@
+.slideshow-container {
+    max-width: 100%; /* Ensure the slideshow container fills its parent */
+}
+
+.slideshow-container .slick-slider {
+    width: 100%; /* Ensure the slider fills its parent */
+}
+
+.slideshow-container .slick-track {
+    width: 100%; /* Ensure the track fills the slider */
+    height: 80vh;
+}
+
+.slideshow-container .image-slider{
+    display: flex !important;
+    justify-content: center;
+}
+
+.slide-image {
+    max-width: 100%; /* Ensure the image fits within its container */
+    height: auto; /* Preserve aspect ratio */
+}
+
+.image-slider{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.image-text {
+    position: absolute;
+    bottom: 325px;
+    color: white;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    width: 85%;
+    border-radius: 20px;
+}
+

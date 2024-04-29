@@ -23,7 +23,7 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import { Badge, Menu, MenuItem } from '@mui/material';
 
-const MiniDrawer = () => {
+const Layout = ({ children }) => {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
 
@@ -32,6 +32,8 @@ const MiniDrawer = () => {
 
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+
+    const drawerWidth = 240
 
     const handleProfileMenuOpen = (event) => {
         setAnchorEl(event.currentTarget);
@@ -151,7 +153,7 @@ const MiniDrawer = () => {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap component="div">
-                        Book My Game
+                        Tuff Line
                     </Typography>
                     <Search>
                         <SearchIconWrapper>
@@ -263,8 +265,20 @@ const MiniDrawer = () => {
                     ))}
                 </List>
             </Drawer>
-            <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-                <DrawerHeader />
+            <Box
+                component="main" 
+                sx={{ 
+                    flexGrow: 1, 
+                    p: 3,
+                    marginTop: "64px",
+                    width: open ? `calc(100% - ${drawerWidth}px)` : '93.15%',
+                    transition: theme.transitions.create(['width'], {
+                        easing: theme.transitions.easing.sharp,
+                        duration: theme.transitions.duration.enteringScreen,
+                    }), 
+                }}
+            >
+                {/* <DrawerHeader /> */}
                 {/* <Typography paragraph>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non
@@ -292,9 +306,10 @@ const MiniDrawer = () => {
                     eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
                     posuere sollicitudin aliquam ultrices sagittis orci a.
                 </Typography> */}
+                {children}
             </Box>
         </Box>
     );
 }
 
-export { MiniDrawer }
+export { Layout }
